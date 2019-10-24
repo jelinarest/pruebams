@@ -1,0 +1,51 @@
+{
+    "name": "CronogramaEtapaActividad",
+    "fields": [
+        {
+            "fieldName": "anio",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "semana",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "realizado",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cronogramaEtapa",
+            "otherEntityRelationshipName": "cronogramaEtapaActividad",
+            "relationshipValidateRules": "required",
+            "relationshipName": "cronogramaEtapa",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20191024162420",
+    "entityTableName": "cronograma_etapa_actividad",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

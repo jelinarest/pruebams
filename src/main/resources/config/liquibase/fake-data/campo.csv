@@ -1,0 +1,11 @@
+id;nombre;multi_seleccion;requerido;longitud;dependiente_visibilidad;dato_id
+1;HDD;false;true;22024;false;1
+2;Buckinghamshire Future-proofed deposit;false;true;69093;false;2
+3;Cambridgeshire hacking;true;false;73521;false;3
+4;Global;true;true;25794;false;4
+5;Bacon Designer;true;true;26082;false;5
+6;Tasty Customer Human;true;false;33902;false;6
+7;Saint Helena Pound programming;true;true;40450;true;7
+8;invoice Unbranded Cheese;true;true;60642;true;8
+9;transform;true;true;97366;false;9
+10;Gloves;true;false;69189;false;10

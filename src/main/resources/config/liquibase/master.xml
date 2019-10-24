@@ -14,6 +14,22 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162418_added_entity_Cronograma.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162419_added_entity_CronogramaEtapa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162420_added_entity_CronogramaEtapaActividad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162421_added_entity_Campo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162422_added_entity_Catalogo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162423_added_entity_CatalogoElemento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162424_added_entity_Dato.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162425_added_entity_TipoDato.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162426_added_entity_TipoValidacion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162427_added_entity_Plantilla.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162428_added_entity_TipoPlantilla.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191024162419_added_entity_constraints_CronogramaEtapa.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162420_added_entity_constraints_CronogramaEtapaActividad.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162421_added_entity_constraints_Campo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162423_added_entity_constraints_CatalogoElemento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191024162427_added_entity_constraints_Plantilla.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

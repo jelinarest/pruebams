@@ -1,0 +1,70 @@
+{
+    "name": "Campo",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "multiSeleccion",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "requerido",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "longitud",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dependienteVisibilidad",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dato",
+            "otherEntityRelationshipName": "campo",
+            "relationshipValidateRules": "required",
+            "relationshipName": "dato",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoDato",
+            "otherEntityRelationshipName": "campo",
+            "relationshipName": "tipoDato",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoValidacion",
+            "otherEntityRelationshipName": "campo",
+            "relationshipName": "tipoValidacion",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "catalogo",
+            "otherEntityRelationshipName": "campo",
+            "relationshipName": "catalogo",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20191024162421",
+    "entityTableName": "campo",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

@@ -1,0 +1,44 @@
+{
+    "name": "TipoValidacion",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "expresionRegular",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 2000
+        },
+        {
+            "fieldName": "textoAyuda",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "campo",
+            "otherEntityRelationshipName": "tipoValidacion",
+            "relationshipName": "campo"
+        }
+    ],
+    "changelogDate": "20191024162426",
+    "entityTableName": "tipo_validacion",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

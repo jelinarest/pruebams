@@ -1,0 +1,37 @@
+{
+    "name": "CatalogoElemento",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "catalogo",
+            "otherEntityRelationshipName": "catalogoElemento",
+            "relationshipValidateRules": "required",
+            "relationshipName": "catalogo",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20191024162423",
+    "entityTableName": "catalogo_elemento",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "TipoPlantilla",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "plantilla",
+            "otherEntityRelationshipName": "tipoPlantilla",
+            "relationshipName": "plantilla"
+        }
+    ],
+    "changelogDate": "20191024162428",
+    "entityTableName": "tipo_plantilla",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

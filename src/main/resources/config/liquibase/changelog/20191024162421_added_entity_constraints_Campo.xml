@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Campo.
+    -->
+    <changeSet id="20191024162421-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dato_id"
+                                 baseTableName="campo"
+                                 constraintName="fk_campo_dato_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dato"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_dato_id"
+                                 baseTableName="campo"
+                                 constraintName="fk_campo_tipo_dato_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_dato"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_validacion_id"
+                                 baseTableName="campo"
+                                 constraintName="fk_campo_tipo_validacion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_validacion"/>
+
+        <addForeignKeyConstraint baseColumnNames="catalogo_id"
+                                 baseTableName="campo"
+                                 constraintName="fk_campo_catalogo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="catalogo"/>
+
+    </changeSet>
+</databaseChangeLog>

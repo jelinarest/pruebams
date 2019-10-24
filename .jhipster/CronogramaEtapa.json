@@ -1,0 +1,57 @@
+{
+    "name": "CronogramaEtapa",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "notas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaAlta",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "orden",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cronogramaEtapaActividad",
+            "otherEntityRelationshipName": "cronogramaEtapa",
+            "relationshipName": "cronogramaEtapaActividad"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cronograma",
+            "otherEntityRelationshipName": "cronogramaEtapa",
+            "relationshipValidateRules": "required",
+            "relationshipName": "cronograma",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20191024162419",
+    "entityTableName": "cronograma_etapa",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

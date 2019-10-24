@@ -1,0 +1,49 @@
+{
+    "name": "Plantilla",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 2000
+        },
+        {
+            "fieldName": "numeroColumnas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoPlantilla",
+            "otherEntityRelationshipName": "plantilla",
+            "relationshipValidateRules": "required",
+            "relationshipName": "tipoPlantilla",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20191024162427",
+    "entityTableName": "plantilla",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "pruebams",
+    "applications": "*",
+    "microserviceName": "pruebams"
+}

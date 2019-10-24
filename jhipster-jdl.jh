@@ -1,0 +1,82 @@
+entity Cronograma {
+    nombre String required maxlength(50), 
+    descripcion String,
+    motivoAjuste String,
+    activo Boolean,
+    fechaAlta ZonedDateTime
+}
+
+entity CronogramaEtapa{
+    nombre String required maxlength(50),
+    notas String,
+    fechaAlta ZonedDateTime,
+    activo Boolean,
+    orden Integer
+}
+
+entity CronogramaEtapaActividad {
+    anio Integer required,
+    mes Integer required,
+    semana Integer required,
+    realizado Boolean
+}
+
+
+
+entity Campo {
+    nombre String required,
+    multiSeleccion Boolean,
+    requerido Boolean,
+    longitud Integer,
+    dependienteVisibilidad Boolean
+}
+
+entity Catalogo {
+    nombre String required,
+    activo Boolean
+}
+
+entity CatalogoElemento {
+    nombre String required,
+    activo Boolean
+}
+
+entity Dato {
+    nombre String required
+}
+
+entity TipoDato {
+    nombre String required
+}
+
+entity TipoValidacion {
+    nombre String required,
+    expresionRegular String maxlength(2000) required,
+    textoAyuda String    
+}
+
+entity Plantilla {
+    nombre String required,
+    descripcion String maxlength(2000),
+    numeroColumnas Integer,
+    activo Boolean
+}
+
+entity TipoPlantilla{
+    nombre String
+}
+
+relationship OneToMany {
+    Cronograma{cronogramaEtapa} to CronogramaEtapa{cronograma(nombre) required}
+    CronogramaEtapa{cronogramaEtapaActividad} to CronogramaEtapaActividad{cronogramaEtapa(nombre) required}
+    TipoPlantilla{plantilla} to Plantilla{tipoPlantilla(nombre)}
+    Dato{campo} to Campo{dato(nombre) required}
+    TipoDato{campo} to Campo{tipoDato(nombre)}
+    TipoValidacion{campo} to Campo{tipoValidacion(nombre)}
+    Catalogo{catalogoElemento} to CatalogoElemento{catalogo(nombre) required} 
+    Catalogo{campo} to Campo{catalogo(nombre)}
+    TipoPlantilla{plantilla} to Plantilla{tipoPlantilla(nombre) required}
+}
+
+paginate * with pagination
+dto * with mapstruct
