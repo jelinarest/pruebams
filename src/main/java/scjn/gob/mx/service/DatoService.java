@@ -87,7 +87,7 @@ public class DatoService {
      */
     public void delete(Long id) {
         log.debug("Request to delete Dato : {}", id);
-        log.debug("Log test sub", id);
+        log.debug("Log test sub rama", id);
         datoRepository.deleteById(id);
         datoSearchRepository.deleteById(id);
     }
