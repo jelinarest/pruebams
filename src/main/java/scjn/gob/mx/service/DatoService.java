@@ -62,6 +62,7 @@ public class DatoService {
     @Transactional(readOnly = true)
     public Page<DatoDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Datoes");
+        log.debug("Test");
         return datoRepository.findAll(pageable)
             .map(datoMapper::toDto);
     }
