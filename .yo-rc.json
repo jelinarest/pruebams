@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "scjn.gob.mx"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "microservice",
+    "baseName": "pruebams",
+    "packageName": "scjn.gob.mx",
+    "packageFolder": "scjn/gob/mx",
+    "serverPort": "8081",
+    "authenticationType": "oauth2",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NDY3ZmVmMTA5OTkzMDI0YWU1N2E1MDE4ZTdmMGQ1YTY0ZmZlMjY1MzQzNWNlMDZiMzFlNWMxZGEwN2RjNTEyMzg2OTk0MjY0ZWUyYTA1OGNlZTkyYzYxNThhNjRlYmJjNTQzYzU2YmVkNDRiMDAwZDk2NzJiZjUwMjlmNWQxMjI=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
